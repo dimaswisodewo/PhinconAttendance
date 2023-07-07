@@ -77,7 +77,19 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func registerButtonPressed() {
-        print("Register success")
+        
+        guard let passwordValue = passwordTextField.text else { return }
+        guard let passwordConfirmValue = repeatPasswordTextField.text else { return }
+
+        if passwordValue == passwordConfirmValue {
+            print("Register success")
+            
+            guard let vc = storyboard?.instantiateViewController(withIdentifier: LoginViewController.identifier) else { return }
+            
+            changeRootController(vc: vc)
+        } else {
+            print("Password does not match")
+        }
     }
     
     @objc private func loginButtonPressed() {

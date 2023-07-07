@@ -26,7 +26,7 @@ class HistoryTableViewCell: UITableViewCell {
         label.numberOfLines = 3
         label.lineBreakMode = .byTruncatingTail
         label.textColor = UIColor.black
-//        label.font = Helper.shared.getCustomFont(customFont: .DMSans, size: 18, weight: .bold)
+        label.font = Helper.shared.getCustomFont(customFont: .Avenir, size: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -36,7 +36,7 @@ class HistoryTableViewCell: UITableViewCell {
         label.numberOfLines = 1
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(named: ColorUtils.shared.primaryGrey)
-//        label.font = Helper.shared.getCustomFont(customFont: .DMSans, size: 14, weight: .bold)
+        label.font = Helper.shared.getCustomFont(customFont: .Avenir, size: 14, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
