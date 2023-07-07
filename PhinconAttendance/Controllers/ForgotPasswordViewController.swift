@@ -74,11 +74,18 @@ class ForgotPasswordViewController: UIViewController {
     @objc private func ktpTextFieldValidation() {
         
         isKtpEmpty = !ktpTextField.hasText
-        
+                
         if !isKtpEmpty, !isPasswordEmpty, !isRepeatPasswordEmpty {
             setEnableResetPasswordButton(isEnable: true)
         } else {
             setEnableResetPasswordButton(isEnable: false)
+        }
+        
+        // Delete recently added character if ktp value count > 16
+        guard let ktpValue = ktpTextField.text else { return }
+        if ktpValue.count > 16 {
+            print("drop \(String(describing: ktpValue.last))")
+            ktpTextField.text = String(ktpValue.dropLast())
         }
     }
     
@@ -136,20 +143,14 @@ extension ForgotPasswordViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == ktpTextField {
-
-            // Remove last char if value count > 16
-            if ktpTextField.hasText {
-                
-                let ktpValue = ktpTextField.text!
-                
-                if ktpValue.count > 16 {
-                    ktpTextField.text = String(ktpValue.dropLast())
-                }
-            }
             
             let allowedCharacters = CharacterSet.decimalDigits
             let characterSet = CharacterSet(charactersIn: string)
-            return allowedCharacters.isSuperset(of: characterSet)
+
+            let isAllowed = allowedCharacters.isSuperset(of: characterSet)
+            
+            print(isAllowed)
+            return isAllowed
         } else {
             return true
         }
