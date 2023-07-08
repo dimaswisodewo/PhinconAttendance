@@ -123,19 +123,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to login" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynJ-zY-DRh">
-                                <rect key="frame" x="30" y="133" width="165.33333333333334" height="20"/>
+                                <rect key="frame" x="30" y="177" width="165.33333333333334" height="20"/>
                                 <fontDescription key="fontDescription" name="AvenirLTStd-Black" family="Avenir LT Std" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill Username &amp; password to login your app account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHD-EQ-yh5">
-                                <rect key="frame" x="30" y="163" width="370" height="14"/>
+                                <rect key="frame" x="30" y="207" width="370" height="14"/>
                                 <fontDescription key="fontDescription" name="AvenirLTStd-Roman" family="Avenir LT Std" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66I-Yz-Uqm">
-                                <rect key="frame" x="5" y="205" width="420" height="727"/>
+                                <rect key="frame" x="5" y="249" width="420" height="683"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjU-HO-KtV">
                                         <rect key="frame" x="30.000000000000004" y="46" width="63.333333333333343" height="14"/>
@@ -172,7 +172,7 @@
                                         <state key="normal" title="Forgot password"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg3-6D-dyK">
-                                        <rect key="frame" x="30" y="578" width="360" height="57"/>
+                                        <rect key="frame" x="30" y="534" width="360" height="57"/>
                                         <color key="backgroundColor" name="PrimaryYellow"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="bpK-tM-zqc"/>
@@ -184,7 +184,7 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-DC-Hi0">
-                                        <rect key="frame" x="67" y="647" width="286" height="30"/>
+                                        <rect key="frame" x="67" y="603" width="286" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account? please" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-OW-la3">
                                                 <rect key="frame" x="0.0" y="0.0" width="211" height="30"/>
@@ -239,6 +239,7 @@
                             <constraint firstItem="YHD-EQ-yh5" firstAttribute="leading" secondItem="eRc-Pc-9Ny" secondAttribute="leading" constant="30" id="is5-lZ-f01"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9IS-u9-14K"/>
                     <connections>
                         <outlet property="forgotPassword" destination="4Ey-VW-vYU" id="rcn-E0-m2F"/>
                         <outlet property="loginButton" destination="Rg3-6D-dyK" id="yl8-a0-9kz"/>
@@ -266,7 +267,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="885" y="-35"/>
+            <point key="canvasLocation" x="1783.2558139534883" y="-35.407725321888414"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="O4b-h5-oOb">
@@ -463,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z02-vJ-AD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="-35"/>
+            <point key="canvasLocation" x="2489.3023255813955" y="-35.407725321888414"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="wcG-HN-v5Q">
@@ -633,7 +634,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyL-cb-K67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2303" y="-35"/>
+            <point key="canvasLocation" x="3200.9302325581393" y="-35.407725321888414"/>
         </scene>
         <!--Profile-->
         <scene sceneID="eld-LG-FmT">
@@ -907,7 +908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dft-ti-g6T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4036" y="270"/>
+            <point key="canvasLocation" x="4933.9534883720926" y="269.74248927038627"/>
         </scene>
         <!--History-->
         <scene sceneID="0dg-bU-YqF">
@@ -938,17 +939,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW4-qX-KWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4036" y="-385"/>
+            <point key="canvasLocation" x="4933.9534883720926" y="-385.62231759656657"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="y0K-ND-JHL">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarViewController" id="oqr-ul-lIE" customClass="MainTabBarViewController" customModule="PhinconAttendance" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DST-NS-bAt">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="DST-NS-bAt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="PrimaryGrey"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="zCB-hN-7Qw" kind="relationship" relationship="viewControllers" id="67w-WE-hD3"/>
@@ -958,7 +959,25 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBa-JY-bxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3129" y="-35"/>
+            <point key="canvasLocation" x="4026.9767441860463" y="-35.407725321888414"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6cv-Eq-oSj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nqx-Af-kWZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9I-nU-V6Z">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mKq-6m-FC0" kind="relationship" relationship="rootViewController" id="ecD-H8-Ae0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ji3-SV-Gst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.65116279069764" y="-35.407725321888414"/>
         </scene>
     </scenes>
     <resources>
@@ -969,6 +988,9 @@
         <image name="icons-employee-self-service" width="250" height="250"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="profile" width="314" height="314"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BackgroundGrey">
             <color red="0.97254901960784312" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

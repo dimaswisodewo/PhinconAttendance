@@ -62,7 +62,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configureNavBar()
+    }
+    
+    private func configureNavBar() {
+        navigationItem.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = .white
     }
     
     @objc private func usernameTextFieldValidation() {

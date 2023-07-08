@@ -14,7 +14,10 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configureNavBar()
     }
 
+    private func configureNavBar() {
+        navigationController?.navigationBar.tintColor = UIColor(named: ColorUtils.shared.primaryBlue)
+    }
 }
