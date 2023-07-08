@@ -65,9 +65,13 @@ class LoginViewController: UIViewController {
         configureNavBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
     private func configureNavBar() {
         navigationItem.backButtonTitle = ""
-        navigationController?.navigationBar.tintColor = .white
     }
     
     @objc private func usernameTextFieldValidation() {
@@ -96,6 +100,7 @@ class LoginViewController: UIViewController {
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: MainTabBarViewController.identifier) else { return }
         
+        navigationItem.backButtonTitle = "Log Out"
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -110,6 +115,7 @@ class LoginViewController: UIViewController {
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: ForgotPasswordViewController.identifier) else { return }
         
+        navigationItem.backButtonTitle = ""
         navigationController?.pushViewController(vc, animated: true)
     }
         

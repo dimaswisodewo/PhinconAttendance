@@ -135,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66I-Yz-Uqm">
-                                <rect key="frame" x="5" y="249" width="420" height="683"/>
+                                <rect key="frame" x="5" y="249" width="420" height="688"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjU-HO-KtV">
                                         <rect key="frame" x="30.000000000000004" y="46" width="63.333333333333343" height="14"/>
@@ -172,7 +172,7 @@
                                         <state key="normal" title="Forgot password"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg3-6D-dyK">
-                                        <rect key="frame" x="30" y="534" width="360" height="57"/>
+                                        <rect key="frame" x="30" y="539" width="360" height="57"/>
                                         <color key="backgroundColor" name="PrimaryYellow"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="bpK-tM-zqc"/>
@@ -184,7 +184,7 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-DC-Hi0">
-                                        <rect key="frame" x="67" y="603" width="286" height="30"/>
+                                        <rect key="frame" x="67" y="608" width="286" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account? please" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-OW-la3">
                                                 <rect key="frame" x="0.0" y="0.0" width="211" height="30"/>
@@ -234,7 +234,7 @@
                             <constraint firstItem="66I-Yz-Uqm" firstAttribute="top" secondItem="YHD-EQ-yh5" secondAttribute="bottom" constant="28" id="Opl-To-TFw"/>
                             <constraint firstAttribute="trailing" secondItem="66I-Yz-Uqm" secondAttribute="trailing" constant="5" id="V0S-wL-qs6"/>
                             <constraint firstAttribute="trailing" secondItem="YHD-EQ-yh5" secondAttribute="trailing" constant="30" id="cdW-6C-x3d"/>
-                            <constraint firstAttribute="bottom" secondItem="66I-Yz-Uqm" secondAttribute="bottom" id="gxb-uy-F3C"/>
+                            <constraint firstAttribute="bottom" secondItem="66I-Yz-Uqm" secondAttribute="bottom" constant="-5" id="gxb-uy-F3C"/>
                             <constraint firstItem="ynJ-zY-DRh" firstAttribute="leading" secondItem="eRc-Pc-9Ny" secondAttribute="leading" constant="30" id="h8v-3B-gN8"/>
                             <constraint firstItem="YHD-EQ-yh5" firstAttribute="leading" secondItem="eRc-Pc-9Ny" secondAttribute="leading" constant="30" id="is5-lZ-f01"/>
                         </constraints>
