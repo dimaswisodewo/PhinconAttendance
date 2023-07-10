@@ -50,6 +50,15 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         historyTableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: DetailViewController.identifier) as? DetailViewController else {
+            return
+        }
+        
+        let model = DummyData.shared.dummy[indexPath.row]
+        vc.configure(model)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

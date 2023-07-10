@@ -29,6 +29,9 @@
 		38BCB6622A58050F00D5BE29 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCB6612A58050F00D5BE29 /* HistoryTableViewCell.swift */; };
 		38BCB6652A5805CF00D5BE29 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCB6642A5805CF00D5BE29 /* DummyData.swift */; };
 		38BCB6682A58061700D5BE29 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCB6672A58061700D5BE29 /* HistoryModel.swift */; };
+		38E2018E2A5BB89D00A5D20B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E2018D2A5BB89D00A5D20B /* DetailViewController.swift */; };
+		38E201902A5BBD1E00A5D20B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E2018F2A5BBD1E00A5D20B /* HomeCollectionViewCell.swift */; };
+		38E201932A5BDC8D00A5D20B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E201922A5BDC8D00A5D20B /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		38BCB6612A58050F00D5BE29 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		38BCB6642A5805CF00D5BE29 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		38BCB6672A58061700D5BE29 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		38E2018D2A5BB89D00A5D20B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		38E2018F2A5BBD1E00A5D20B /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		38E201922A5BDC8D00A5D20B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 		388266052A57AF7600C6CE76 /* PhinconAttendance */ = {
 			isa = PBXGroup;
 			children = (
+				38E201912A5BDC8400A5D20B /* Managers */,
 				38BCB6402A57E4BE00D5BE29 /* Fonts */,
 				38BCB6632A5805C500D5BE29 /* DummyData */,
 				38BCB64F2A57ED1A00D5BE29 /* General */,
@@ -126,6 +133,7 @@
 				38BCB6582A57FDDB00D5BE29 /* HistoryViewController.swift */,
 				38BCB65A2A57FDE300D5BE29 /* HomeViewController.swift */,
 				38BCB65C2A57FE5200D5BE29 /* MainTabBarViewController.swift */,
+				38E2018D2A5BB89D00A5D20B /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				38BCB6612A58050F00D5BE29 /* HistoryTableViewCell.swift */,
+				38E2018F2A5BBD1E00A5D20B /* HomeCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +170,14 @@
 				38BCB6672A58061700D5BE29 /* HistoryModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		38E201912A5BDC8400A5D20B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				38E201922A5BDC8D00A5D20B /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E201932A5BDC8D00A5D20B /* NetworkManager.swift in Sources */,
 				38BCB6682A58061700D5BE29 /* HistoryModel.swift in Sources */,
+				38E2018E2A5BB89D00A5D20B /* DetailViewController.swift in Sources */,
 				38BCB6552A57F59A00D5BE29 /* ForgotPasswordViewController.swift in Sources */,
 				38BCB64C2A57E97D00D5BE29 /* LoginViewController.swift in Sources */,
 				38BCB6622A58050F00D5BE29 /* HistoryTableViewCell.swift in Sources */,
+				38E201902A5BBD1E00A5D20B /* HomeCollectionViewCell.swift in Sources */,
 				38BCB6652A5805CF00D5BE29 /* DummyData.swift in Sources */,
 				38BCB6532A57F00C00D5BE29 /* Helper.swift in Sources */,
 				38BCB6592A57FDDB00D5BE29 /* HistoryViewController.swift in Sources */,

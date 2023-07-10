@@ -11,13 +11,20 @@ class HistoryTableViewCell: UITableViewCell {
     
     static let identifier = "HistoryTableViewCell"
     
+    private let posterImageContainerView: UIView = {
+        let view = UIView(frame: CGRect(x: .zero, y: .zero, width: 90, height: 120))
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private let titlePosterImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(systemName: "person")
+        imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .gray.withAlphaComponent(0.3)
         imageView.tintColor = UIColor(named: ColorUtils.shared.primaryBlue)
         imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -41,27 +48,39 @@ class HistoryTableViewCell: UITableViewCell {
         return label
     }()
     
+    private var model: HistoryModel?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(titlePosterImageView)
+        contentView.addSubview(posterImageContainerView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(subtitleLabel)
         
         applyConstraints()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        posterImageContainerView.addSubview(titlePosterImageView)
+        
+        applySubviewsConstraint()
+        
+        posterImageContainerView.roundCorners(corners: .allCorners, radius: 20)
+    }
+    
     private func applyConstraints() {
         
-        let titlePosterImageViewConstraints = [
-            titlePosterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-            titlePosterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            titlePosterImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-            titlePosterImageView.widthAnchor.constraint(equalToConstant: contentView.bounds.width / 3)
+        let titlePosterImageContainerViewConstraints = [
+            posterImageContainerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            posterImageContainerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            posterImageContainerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
+            posterImageContainerView.widthAnchor.constraint(equalToConstant: contentView.bounds.width / 3)
         ]
         
         let titleLabelConstraints = [
-            titleLabel.leadingAnchor.constraint(equalTo: titlePosterImageView.trailingAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: posterImageContainerView.trailingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -15)
         ]
@@ -72,15 +91,28 @@ class HistoryTableViewCell: UITableViewCell {
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10)
         ]
                 
-        NSLayoutConstraint.activate(titlePosterImageViewConstraints)
+        NSLayoutConstraint.activate(titlePosterImageContainerViewConstraints)
         NSLayoutConstraint.activate(titleLabelConstraints)
         NSLayoutConstraint.activate(subtitleLabelConstraints)
     }
     
+    private func applySubviewsConstraint() {
+        
+        titlePosterImageView.frame = posterImageContainerView.bounds
+    }
+    
     public func configure(with model: HistoryModel) {
+        
+        self.model = model
         
         titleLabel.text = model.title
         subtitleLabel.text = model.subtitle
+        configureImageView()
+    }
+    
+    func configureImageView() {
+        guard let model = self.model else { return }
+        titlePosterImageView.loadAndCache(url: model.imageUrl, cache: nil, placeholder: nil)
     }
     
     required init?(coder: NSCoder) {

@@ -10,4 +10,5 @@ import Foundation
 struct HistoryModel {
     var title: String = ""
     var subtitle: String = ""
+    var imageUrl: String = ""
 }
