@@ -61,6 +61,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let model = DummyData.shared.dummy[indexPath.item]
         vc.configure(model)
+        vc.navigationItem.title = model.subtitle
         
         navigationController?.pushViewController(vc, animated: true)
     }

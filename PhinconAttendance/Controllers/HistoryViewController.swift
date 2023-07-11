@@ -57,6 +57,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         let model = DummyData.shared.dummy[indexPath.row]
         vc.configure(model)
+        vc.navigationItem.title = model.subtitle
         
         navigationController?.pushViewController(vc, animated: true)
     }
