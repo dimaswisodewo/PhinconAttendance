@@ -59,6 +59,9 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         vc.configure(model)
         vc.navigationItem.title = model.subtitle
         
+        vc.printReversedNameFromMethod() // Panggil method
+        printNameWithEmoticonFromFunction(name: model.title) // Panggil function
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
